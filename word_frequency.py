@@ -63,13 +63,17 @@ def histogram(current,max_count):
 
 
 """                     Start of program                    """
-try:
-    with open((sys.argv[1])) as input_file:
-        input_lines = input_file.readlines()
-except:
-    with open("sample.txt") as input_file:
-        input_lines = input_file.readlines()
 
-#join all the lines of text by " "
-input_string = " ".join(input_lines)
-dict_of_words = word_frequency(input_string)
+if __name__ == '__main__':
+    # The top-level script is called __main__ so if a function from this
+    # script is being imported, the following code will not be run
+    try:
+        with open((sys.argv[1])) as input_file:
+            input_lines = input_file.readlines()
+    except:
+        with open("sample.txt") as input_file:
+            input_lines = input_file.readlines()
+
+    #join all the lines of text by " "
+    input_string = " ".join(input_lines)
+    dict_of_words = word_frequency(input_string)
