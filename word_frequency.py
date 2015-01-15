@@ -10,8 +10,7 @@ def format_text(original_text):
     bad_chars = ["\n","\r","\t",".",",",'"',"?","!","]","[",
                 "0","1","2","3","4","5","6","7","8","9","'",
                 "(",")","@","#","$","%","^","&","*","_","+",
-                ":",";","/","http","www","`","~"]
-    new_text = new_text.replace("--", " ")
+                ":",";","/","http","www","`","~","--"]
     for bad_char in bad_chars:
          new_text = new_text.replace(bad_char,' ')
     text = new_text.split(' ')
